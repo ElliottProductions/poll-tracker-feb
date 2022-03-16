@@ -110,12 +110,19 @@ footer {
 .form-area {
     display: flex;
     flex-direction: column;
-    background-color: aqua;
+    background-color:blanchedalmond;
     justify-content: center;
     padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.37);
 }
 
 .form-area > label > input{
     width: 300px;
     
+}
+
+.options > div {
+    display: flex;
+    flex-direction: row;
 }
