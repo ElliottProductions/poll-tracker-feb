@@ -1,4 +1,6 @@
 // import functions and grab DOM elements
+
+import { renderPastPoll } from './render.js';
 const aVoteUp = document.getElementById('option-a-add');
 const bVoteUp = document.getElementById('option-b-add');
 const aVoteDown = document.getElementById('option-a-sub');
@@ -16,6 +18,7 @@ const option1Votes = document.getElementById('option-1-votes');
 const option2Label = document.getElementById('option-2-label');
 const option2Votes = document.getElementById('option-2-votes');
 const form = document.querySelector('form');
+const pastPolls = document.querySelector('past-polls');
 
 
 // let state
@@ -24,6 +27,8 @@ let aVotes = 0;
 let bVotes = 0;
 let aTitle = '';
 let bTitle = '';
+
+const pastPollsArray = [];
 
 // set event listeners
 aVoteUp.addEventListener('click', () => {
@@ -60,7 +65,7 @@ form.addEventListener('submit', (e) => {
 });
 
 endPoll.addEventListener('click', () => {
-    form.rest();
+    form.reset();
 
     const poll = makePoll();
 });
@@ -73,7 +78,38 @@ function displayCurrentPoll() {
     option2Votes.textContent = bVotes;
 }
 
+function makePoll(){
+    return {
+        question: question,
+        option1Label: aTitle,
+        option2Label: bTitle,
+        option1Votes: aVotes,
+        option2Votes: bVotes,
 
+
+
+    };
+}
+
+function resetState() {
+    question = '';
+    aVotes = 0;
+    bVotes = 0;
+    aTitle = '';
+    bTitle = '';
+
+}
+
+function displayList() {
+    pastPolls.textContent = '';
+
+    for (let pastPoll of pastPollsArray) {
+        const container = renderPastPoll();
+
+        pastPolls.append(container);
+    }
+
+}
 
 
   // get user input
