@@ -9,12 +9,13 @@ export function renderPastPoll(pastPoll) {
     container.classList.add('past-polls');
 
     pQuestion.textContent = pastPoll.question;
-    pTitleA.textContent = pastPoll.option1label;
+    pTitleA.textContent = pastPoll.option1Label;
     pTitleB.textContent = pastPoll.option2Label;
     pVotesA.textContent = pastPoll.option1Votes;
     pVotesB.textContent = pastPoll.option2Votes;
 
-    container.append(pQuestion, pTitleA, pTitleB, pVotesA, pVotesB);
+    container.append(pQuestion, pTitleA, pVotesA, pTitleB, pVotesB);
+
 
     return container;
 
