@@ -13,55 +13,60 @@
 </head>
 
 <body>
-    <header>
-        <div class="gutter-right logo">
-            <img src="./assets/big-logo.png" />
-        </div>
-    </header>
+
     <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
-            </h2>
+        <div>
+            <form class="form-area">
+                <label>
+                    Question
+                    
+                    <input name="question-area">
+                </label>
+                <br>
+                <label>
+                    Option A
+                    <input name="question-1">
+                </label>
+                <br>
+                <label>
+                    Option B
+                    <input name="question-2">
+                </label>
+                <br>
+                <button>Start Poll</button>
+            </form>
+        </div>
+        <br>
+        <div class="main-section">
+            <div>
+                <button id="option-a-add" class="vote-button">Option A Vote</button>
+                <button id="option-b-add" class="vote-button">Option B Vote</button>
+            </div>
+            <div>
+                <button id="option-a-sub" class="vote-button">Option A Unvote</button>
+                <button id="option-b-sub" class="vote-button">Option B Unvote</button>
+            </div>
+            <br>
+            <button id="end-poll">End Poll</button>
+            
+        </div>
+        <div class="options">
+            <h3 id="question-label"></h3>
+            <div>
+                <p id="option-1-label"></p>
+                <p id="option-1-votes"></p>
+            </div>
+            <div>
+                <p id="option-2-label"></p>
+                <p id="option-2-votes"></p>
+            </div>
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-
-        </section>
+        </div>
+        <div>
+            <h3>Past Polls:</h3>
+            <div class="past-polls">
+            </div>
+        </div>
     </main>
     <footer>
         <div class="copy gutter-right">&copy; 2021 Alchemy Code Lab</div>
