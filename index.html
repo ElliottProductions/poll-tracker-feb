@@ -19,15 +19,15 @@
             <form>
                 <label>
                     Question!?
-                    <input class="question-area">
+                    <input name="question-area">
                 </label>
                 <label>
-                    Option 1
-                    <input class="question-1">
+                    Option A
+                    <input name="question-1">
                 </label>
                 <label>
-                    Option 2
-                    <input class="question-2">
+                    Option B
+                    <input name="question-2">
                 </label>
                 <button>Start Poll</button>
             </form>
@@ -35,16 +35,17 @@
         <div class="main-section">
             <div>
                 <button id="option-a-add" class="vote-button">Option A Vote</button>
-                <button id="option-a-add" class="vote-button">Option B Vote</button>
+                <button id="option-b-add" class="vote-button">Option B Vote</button>
             </div>
             <div>
                 <button id="option-a-sub" class="vote-button">Option A Unvote</button>
-                <button id="option-a-sub" class="vote-button">Option B Unvote</button>
+                <button id="option-b-sub" class="vote-button">Option B Unvote</button>
             </div>
             <button id="end-poll">End Poll</button>
             
         </div>
         <div class="options">
+            <p id="question-label"></p>
             <div>
                 <p id="option-1-label"></p>
                 <p id="option-1-votes"></p>
