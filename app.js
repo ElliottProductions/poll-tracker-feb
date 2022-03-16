@@ -18,7 +18,7 @@ const option1Votes = document.getElementById('option-1-votes');
 const option2Label = document.getElementById('option-2-label');
 const option2Votes = document.getElementById('option-2-votes');
 const form = document.querySelector('form');
-const pastPolls = document.querySelector('past-polls');
+const pastPolls = document.querySelector('.past-polls');
 
 
 // let state
@@ -68,6 +68,14 @@ endPoll.addEventListener('click', () => {
     form.reset();
 
     const poll = makePoll();
+
+    pastPollsArray.push(poll);
+
+    resetState();
+
+    displayCurrentPoll();
+
+    displayList();
 });
 
 function displayCurrentPoll() {
@@ -101,10 +109,10 @@ function resetState() {
 }
 
 function displayList() {
-    pastPolls.textContent = '';
+    pastPolls.innerHTML = '';
 
     for (let pastPoll of pastPollsArray) {
-        const container = renderPastPoll();
+        const container = renderPastPoll(pastPoll);
 
         pastPolls.append(container);
     }
